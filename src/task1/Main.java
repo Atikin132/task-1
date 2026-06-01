@@ -1,3 +1,9 @@
+package task1;
+
+import task1.copier.IOCopier;
+import task1.copier.NIO2Copier;
+import task1.copier.NIOCopier;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Map;

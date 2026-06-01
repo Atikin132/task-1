@@ -1,9 +1,14 @@
+package task1.copier;
+
+import task1.CopyException;
+import task1.FileCopier;
+
 import java.io.*;
 
-public class IOCopier implements FileCopier{
+public class IOCopier implements FileCopier {
 
     @Override
-    public void copy(String source, String destination) throws CopyException{
+    public void copy(String source, String destination) throws CopyException {
         try (InputStream in = new FileInputStream(source);
              OutputStream out = new FileOutputStream(destination)) {
 

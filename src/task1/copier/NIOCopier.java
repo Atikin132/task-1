@@ -1,3 +1,8 @@
+package task1.copier;
+
+import task1.CopyException;
+import task1.FileCopier;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
