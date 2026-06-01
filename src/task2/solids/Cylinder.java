@@ -7,9 +7,9 @@ public class Cylinder extends Solid {
     private int radius;
     private int height;
 
-    public Cylinder(int height, int radius) {
-        this.height = height;
+    public Cylinder(int radius, int height) {
         this.radius = radius;
+        this.height = height;
     }
 
     public int getRadius() {
