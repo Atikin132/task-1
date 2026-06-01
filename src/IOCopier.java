@@ -14,7 +14,7 @@ public class IOCopier implements FileCopier{
             }
         }
         catch (IOException e) {
-            throw new CopyException("IO Copy Exception IO: " + e.getMessage());
+            throw new CopyException("IO Copy Exception: " + e.getMessage());
         }
     }
 }

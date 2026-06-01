@@ -9,10 +9,12 @@ public class Main {
             try {
                 switch (scanner.nextInt()) {
                     case 1:
-                        IOCopier copier = new IOCopier();
-                        copier.copy("C:\\Users\\user\\Desktop\\test.txt", "D:\\test\\test.txt");
+                        IOCopier ioCopier = new IOCopier();
+                        ioCopier.copy("C:\\Users\\user\\Desktop\\test.txt", "D:\\test\\test.txt");
                         break;
                     case 2:
+                        NIOCopier nioCopier = new NIOCopier();
+                        nioCopier.copy("C:\\Users\\user\\Desktop\\test.txt", "D:\\test\\test1.txt");
                         break;
                     case 3:
                         break;
