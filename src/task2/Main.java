@@ -4,6 +4,7 @@ import task2.figures.Square;
 import task2.figures.Trapeze;
 import task2.figures.Triangle;
 import task2.solids.Cube;
+import task2.solids.Cylinder;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,11 +18,14 @@ public class Main {
         System.out.println("Area of " + square.getName() + " is " + square.getArea());
 
 
-        Trapeze trapeze = new Trapeze(5,10,5,4,6);
+        Trapeze trapeze = new Trapeze(5, 10, 5, 4, 6);
         trapeze.print();
         System.out.println("Area of " + trapeze.getName() + " is " + trapeze.getArea());
 
         Cube cube = new Cube(5);
         cube.print();
+
+        Cylinder cylinder = new Cylinder(5, 10);
+        cylinder.print();
     }
 }
