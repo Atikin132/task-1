@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
-    static void main() {
+   public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Copy your files");
         Path sourcePath = readSourceFile(scanner, "Enter the path to the file you want to copy:");
