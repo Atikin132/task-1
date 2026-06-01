@@ -5,11 +5,13 @@ import task2.figures.Triangle;
 
 public class Main {
     public static void main(String[] args) {
-        Triangle triangle1 = new Triangle(2, 4, 3);
-        System.out.println(triangle1.getArea());
-        triangle1.print();
+        Triangle triangle = new Triangle(2, 4, 3);
+        triangle.print();
+        System.out.println("Area of " + triangle.getName() + " is " + triangle.getArea());
+
+
         Square square = new Square(5);
-        System.out.println("Area of " + square.getName() + " is " + square.getArea());
         square.print();
+        System.out.println("Area of " + square.getName() + " is " + square.getArea());
     }
 }
