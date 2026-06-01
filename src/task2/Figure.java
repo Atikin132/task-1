@@ -15,6 +15,5 @@ public abstract class Figure implements Printable {
 
     public void printArea() {
         System.out.println("Area of " + getName() + " is " + getArea());
-
     }
 }
