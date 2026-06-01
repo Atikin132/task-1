@@ -26,8 +26,8 @@ public class Main {
             System.out.println("Source Path: " + sourcePath);
             System.out.println("Destination Path: " + destinationPath);
             printMenu();
-            int choice = Integer.parseInt(scanner.nextLine());
             try {
+                int choice = Integer.parseInt(scanner.nextLine());
                 switch (choice) {
                     case 1:
                     case 2:
@@ -54,9 +54,14 @@ public class Main {
                         break;
                     case 0:
                         return;
+                    default:
+                        break;
                 }
             } catch (CopyException e) {
-                System.out.println(e.getMessage());
+                System.err.println(e.getMessage());
+            }
+            catch (NumberFormatException e) {
+                System.err.println("Enter numbers and try again");
             }
         }
     }
