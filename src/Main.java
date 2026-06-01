@@ -17,6 +17,8 @@ public class Main {
                         nioCopier.copy("C:\\Users\\user\\Desktop\\test.txt", "D:\\test\\test1.txt");
                         break;
                     case 3:
+                        NIO2Copier nio2Copier = new NIO2Copier();
+                        nio2Copier.copy("C:\\Users\\user\\Desktop\\test.txt", "D:\\test\\test2.txt");
                         break;
                     case 0:
                         return;
