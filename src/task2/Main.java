@@ -3,6 +3,7 @@ package task2;
 import task2.figures.Square;
 import task2.figures.Trapeze;
 import task2.figures.Triangle;
+import task2.solids.Cube;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,5 +20,8 @@ public class Main {
         Trapeze trapeze = new Trapeze(5,10,5,4,6);
         trapeze.print();
         System.out.println("Area of " + trapeze.getName() + " is " + trapeze.getArea());
+
+        Cube cube = new Cube(5);
+        cube.print();
     }
 }
