@@ -8,26 +8,27 @@ import task2.solids.Cube;
 import task2.solids.Cylinder;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Figure> figureArrayList = new ArrayList<>();
-        figureArrayList.add(new Triangle(2, 4, 3));
-        figureArrayList.add(new Square(5));
-        figureArrayList.add(new Trapeze(5, 10, 5, 4, 6));
+        List<Figure> figures = new ArrayList<>();
+        figures.add(new Triangle(2, 4, 3));
+        figures.add(new Square(5));
+        figures.add(new Trapeze(5, 10, 5, 4, 6));
 
-        for (Figure figure : figureArrayList) {
+        for (Figure figure : figures) {
             figure.print();
             figure.printArea();
         }
 
-        ArrayList<Solid> solidArrayList = new ArrayList<>();
-        solidArrayList.add(new Cube(5));
-        solidArrayList.add(new Cylinder(5, 10));
-        solidArrayList.add(new Cone(5, 10));
+        List<Solid> solids = new ArrayList<>();
+        solids.add(new Cube(5));
+        solids.add(new Cylinder(5, 10));
+        solids.add(new Cone(5, 10));
 
-        for (Solid solid : solidArrayList) {
+        for (Solid solid : solids) {
             solid.print();
         }
     }
