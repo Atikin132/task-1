@@ -8,6 +8,7 @@ public class Main {
         workWithList();
         workWithMap();
         workWithTreeSet();
+        workWithTreeMap();
     }
 
     public static void workWithSet() {
@@ -148,5 +149,27 @@ public class Main {
         for (Cat cat : catTreeSet) {
             System.out.println(cat);
         }
+        System.out.println();
+    }
+
+    private static void workWithTreeMap() {
+        System.out.println("5 - String TreeMap");
+
+        Map<String, String> stringTreeMap = new TreeMap<>();
+        stringTreeMap.put("2", "Apple");
+        stringTreeMap.put("3", "Pineapple");
+        stringTreeMap.put("1", "Lemon");
+
+        stringTreeMap.forEach((s, s2) -> System.out.println(s + ": " + s2));
+        System.out.println();
+
+        System.out.println("5 - Cat TreeMap");
+        Map<Cat, String> catOwnerTreeMap = new TreeMap<>();
+        catOwnerTreeMap.put(new Cat("Motya", 9), "Karina");
+        catOwnerTreeMap.put(new Cat("Vasya", 4), "Vika");
+        catOwnerTreeMap.put(new Cat("Murzik", 6), "Lena");
+
+        catOwnerTreeMap.forEach((cat, owner) -> System.out.println(cat + ", owner: " + owner));
+        System.out.println();
     }
 }
