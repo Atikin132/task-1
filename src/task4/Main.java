@@ -1,13 +1,12 @@
 package task4;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         setOfStrings();
         setOfCats();
+        workWithList();
     }
 
     public static void setOfStrings() {
@@ -20,9 +19,7 @@ public class Main {
         stringSet.add("fifth");
 
         System.out.println("Strings (foreach output):");
-        for (String string : stringSet) {
-            System.out.println(string);
-        }
+        stringSet.forEach(s -> System.out.println(s));
         System.out.println();
         System.out.println("Add duplicate and output with iterator:");
         stringSet.add("first");
@@ -53,6 +50,51 @@ public class Main {
         System.out.println("Add duplicate and output:");
         for (Cat cat : cats) {
             System.out.println(cat);
+        }
+        System.out.println();
+    }
+
+    public static void workWithList() {
+        System.out.println("2 - Lists");
+
+        List<String> stringList = new ArrayList<>();
+        stringList.add("string1");
+        stringList.add("string2");
+        stringList.add("string3");
+        stringList.add("string4");
+
+        System.out.println("List (for(foreach) output):");
+
+        for (String s : stringList) {
+            System.out.println(s);
+        }
+        System.out.println();
+        System.out.println("Add element to second position:");
+        for (int i = 0; i < stringList.size(); i++) {
+            System.out.println(stringList.get(i));
+            if (i == 2) {
+                stringList.add(1, "string5");
+            }
+        }
+
+        System.out.println();
+        System.out.println("Add element to second position (output):");
+        for (String s : stringList) {
+            System.out.println(s);
+        }
+        System.out.println();
+        System.out.println("Remove element from second position:");
+        for (int i = 0; i < stringList.size(); i++) {
+            System.out.println(stringList.get(i));
+            if (i == 2) {
+                stringList.remove(1);
+            }
+        }
+
+        System.out.println();
+        System.out.println("Remove element from second position (output):");
+        for (String s : stringList) {
+            System.out.println(s);
         }
     }
 }
