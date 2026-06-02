@@ -4,13 +4,13 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-//        setOfStrings();
-//        setOfCats();
-//        workWithList();
+        workWithSet();
+        workWithList();
         workWithMap();
+        workWithTreeSet();
     }
 
-    public static void setOfStrings() {
+    public static void workWithSet() {
         System.out.println("1 - Set of strings");
         Set<String> stringSet = new HashSet<>();
         stringSet.add("first");
@@ -29,9 +29,7 @@ public class Main {
             System.out.println(iterator.next());
         }
         System.out.println();
-    }
 
-    public static void setOfCats() {
         System.out.println("1 - Set of cats");
         Set<Cat> cats = new HashSet<>();
         cats.add(new Cat("Motya", 9));
@@ -126,5 +124,29 @@ public class Main {
         catOwnerMap.put(new Cat("Murzik", 6), "Vova");
         catOwnerMap.forEach((cat, owner) -> System.out.println(cat + ", owner: " + owner));
         System.out.println();
+    }
+
+    private static void workWithTreeSet() {
+        System.out.println("4 - String TreeSet");
+
+        Set<String> stringTreeSet = new TreeSet<>();
+        stringTreeSet.add("Lemon");
+        stringTreeSet.add("Apple");
+        stringTreeSet.add("Pineapple");
+
+        for (String s : stringTreeSet) {
+            System.out.println(s);
+        }
+        System.out.println();
+
+        System.out.println("4 - Cat TreeSet");
+        Set<Cat> catTreeSet = new TreeSet<>();
+        catTreeSet.add(new Cat("Vasya", 5));
+        catTreeSet.add(new Cat("Motya", 9));
+        catTreeSet.add(new Cat("Barsik", 3));
+
+        for (Cat cat : catTreeSet) {
+            System.out.println(cat);
+        }
     }
 }

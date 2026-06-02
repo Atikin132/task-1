@@ -2,7 +2,7 @@ package task4;
 
 import java.util.Objects;
 
-public class Cat {
+public class Cat implements Comparable<Cat> {
     private String name;
     private int age;
 
@@ -42,5 +42,11 @@ public class Cat {
     @Override
     public int hashCode() {
         return Objects.hash(name, age);
+    }
+
+    @Override
+    public int compareTo(Cat cat) {
+        return Integer.compare(this.age, cat.age);
+
     }
 }
