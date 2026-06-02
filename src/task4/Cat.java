@@ -46,7 +46,10 @@ public class Cat implements Comparable<Cat> {
 
     @Override
     public int compareTo(Cat cat) {
-        return Integer.compare(this.age, cat.age);
-
+        int ageCompare = Integer.compare(this.age, cat.age);
+        if (ageCompare != 0) {
+            return ageCompare;
+        }
+        return this.name.compareTo(cat.name);
     }
 }
