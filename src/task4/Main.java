@@ -4,9 +4,10 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        setOfStrings();
-        setOfCats();
-        workWithList();
+//        setOfStrings();
+//        setOfCats();
+//        workWithList();
+        workWithMap();
     }
 
     public static void setOfStrings() {
@@ -96,5 +97,34 @@ public class Main {
         for (String s : stringList) {
             System.out.println(s);
         }
+        System.out.println();
+    }
+
+    private static void workWithMap() {
+        System.out.println("3 - Map");
+        Map<String, String> stringMap = new HashMap<>();
+        stringMap.put("1", "string1");
+        stringMap.put("2", "string2");
+        stringMap.put("3", "string3");
+        System.out.println(stringMap);
+        System.out.println();
+
+        System.out.println("Add element with duplicate key");
+        stringMap.put("2", "string4");
+        stringMap.forEach((s, s2) -> System.out.println(s + ": " + s2));
+        System.out.println();
+
+        System.out.println("3 - Cat owner map");
+        Map<Cat, String> catOwnerMap = new HashMap<>();
+        catOwnerMap.put(new Cat("Motya", 9), "Karina");
+        catOwnerMap.put(new Cat("Vasya", 4), "Vika");
+        catOwnerMap.put(new Cat("Murzik", 6), "Lena");
+        catOwnerMap.forEach((cat, owner) -> System.out.println(cat + ", owner: " + owner));
+        System.out.println();
+
+        System.out.println("Add element with duplicate key");
+        catOwnerMap.put(new Cat("Murzik", 6), "Vova");
+        catOwnerMap.forEach((cat, owner) -> System.out.println(cat + ", owner: " + owner));
+        System.out.println();
     }
 }
